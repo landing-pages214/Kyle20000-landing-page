@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kyle20000 Wallet System</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: #070A12;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* subtle animated background (NOT flashing) */
+.bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 20%, #1b2a4a, transparent 40%),
+                radial-gradient(circle at 80% 30%, #2a1b4a, transparent 40%),
+                radial-gradient(circle at 50% 80%, #0f2a3a, transparent 40%);
+    animation: floatBG 12s ease-in-out infinite alternate;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+@keyframes floatBG {
+    from { transform: scale(1); filter: blur(0px); }
+    to { transform: scale(1.05); filter: blur(2px); }
+}
+
+header {
+    padding: 100px 20px 60px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 0;
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    margin-top: 12px;
+    font-size: 18px;
+    opacity: 0.75;
+}
+
+.badges {
+    margin-top: 20px;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.08);
+    padding: 8px 14px;
+    border-radius: 999px;
+    margin: 5px;
+    font-size: 13px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 20px;
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    background: rgba(255,255,255,0.09);
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+p {
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.section {
+    margin-bottom: 60px;
+}
+
+.cta {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+button {
+    background: linear-gradient(135deg, #4f7cff, #6a5cff);
+    border: none;
+    padding: 14px 22px;
+    font-size: 16px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(79,124,255,0.25);
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.03);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    opacity: 0.5;
+    font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<header>
+    <h1>Kyle20000 Wallet System</h1>
+    <div class="subtitle">
+        A centralized ledger-based wallet with real-time transfers and full audit logging
+    </div>
+
+    <div class="badges">
+        <span class="badge">Python Backend</span>
+        <span class="badge">Ledger System</span>
+        <span class="badge">Admin Dashboard</span>
+        <span class="badge">Audit Logs</span>
+        <span class="badge">Secure Transfers</span>
+    </div>
+</header>
+
+<div class="container">
+
+    <div class="section">
+        <h2>Overview</h2>
+        <p>
+            The Kyle20000 Wallet System is a fully centralized digital ledger platform.
+            It supports user accounts, balance storage, and instant peer-to-peer transfers
+            through a server-controlled Python backend.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Core System</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>User Accounts</h3>
+                <p>Each user has a secure wallet account with a live balance stored in the database.</p>
+            </div>
+
+            <div class="card">
+                <h3>Central Ledger</h3>
+                <p>All transactions are processed and recorded in a single authoritative ledger.</p>
+            </div>
+
+            <div class="card">
+                <h3>Instant Transfers</h3>
+                <p>Users can send balances between accounts instantly with full transaction logging.</p>
+            </div>
+
+            <div class="card">
+                <h3>Admin Control</h3>
+                <p>System administration tools allow monitoring, adjustments, and audit verification.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Reliability</h2>
+        <p>
+            The system includes transaction history tracking, audit logs, and database-backed consistency checks
+            to ensure accuracy and traceability of all balance movements.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Use Cases</h2>
+        <p>
+            Private financial systems, internal platforms, controlled environments, and closed-network payment applications
+            requiring secure account-to-account transfers.
+        </p>
+    </div>
+
+    <div class="cta">
+        <h2>Access System</h2>
+        <p>Login to the wallet system or contact the administrator to create an account.</p>
+        <button onclick="window.location.href='https://kyle20000.pythonanywhere.com'">
+            Enter Wallet System
+        </button>
+    </div>
+
+</div>
+
+<footer>
+    © Kyle20000 Wallet System • Centralized Ledger Architecture • Secure Internal Transfers
+</footer>
+
+</body>
+</html>
